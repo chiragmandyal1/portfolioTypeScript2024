@@ -4,15 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4EB",
-        "gray-50": "#EFE6E6",
-        "gray-100": "#DFCCCC",
-        "gray-500": "#5E0000",
-        "primary-100": "#FFE1E0",
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
-        "secondary-400": "#FFCD5B",
-        "secondary-500": "#FFC132",
+        "gray-20": "#F8F4EB", //footer bg
+        "primary-100": "#F5DF4E", //main
+        "primary-300": "#017DC3", //hover nav bar options
+        "primary-500": "#1C1F23", // hover
+        "secondary-linkedin": "#0A66C2", // logo hover color
+        "secondary-whatsapp": "#00E676", // logo hover color
+        "secondary-mail": "#DDA605", // logo hover color
+        "secondary-github": "#FE0000", // logo hover color
+        "secondary-500": "#D3D3D3",
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred":
@@ -24,10 +24,7 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       content: {
-        evolvetext: "url('./assets/EvolveText.png')",
-        abstractwaves: "url('./assets/AbstractWaves.png')",
-        sparkles: "url('./assets/Sparkles.png')",
-        circles: "url('./assets/Circles.png')",
+        logotext: "url('./assets/LogoText.png')",
       },
     },
     screens: {

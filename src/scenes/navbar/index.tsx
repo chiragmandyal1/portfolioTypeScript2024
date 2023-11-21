@@ -1,5 +1,4 @@
 import Logo from "@/assets/Logo.png";
-import ActionButton from "@/common/ActionButton";
 import { SelectedPage } from "@/common/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -27,42 +26,31 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/*left logo side of the navbar*/}
-            <img alt="logo" src={Logo}></img>
+            <img className="h-15 w-80" alt="logo" src={Logo}></img>
             {/*Right other side of the navbar*/}
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
                 {/*inner right side*/}
-                <div className={`${flexBetween} gap-8 text-sm`}>
-                  <Link
-                    page="Home"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-
-                  <Link
-                    page="Benefits"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-
-                  <Link
-                    page="Our Classes"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-
-                  <Link
-                    page="Contact Us"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                </div>
+                <div className={`${flexBetween} gap-8 text-sm`}></div>
                 {/*Outer right side*/}
-                <div className={`${flexBetween} gap-8 text-sm`}>
-                  <p>Sign in</p>
-                  <ActionButton setSelectedPage={setSelectedPage}>
-                    Become a Member
-                  </ActionButton>
+                <div className={`${flexBetween} gap-8 text-lg`}>
+                  <Link
+                    page="About Me"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+
+                  <Link
+                    page="Skills"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+
+                  <Link
+                    page="Projects"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
                 </div>
               </div>
             ) : (
@@ -88,25 +76,19 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           {/* Menu Items  */}
           <div className={`ml-[33%] flex flex-col gap-10 text-2xl`}>
             <Link
-              page="Home"
+              page="About Me"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
 
             <Link
-              page="Benefits"
+              page="Skills"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
 
             <Link
-              page="Our Classes"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-
-            <Link
-              page="Contact Us"
+              page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />

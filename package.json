@@ -1,5 +1,5 @@
 {
-  "name": "gym-ts",
+  "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,7 +15,9 @@
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.45.2"
+    "react-hook-form": "^7.45.2",
+    "react-icons": "^4.12.0",
+    "simple-icons": "^9.19.1"
   },
   "devDependencies": {
     "@types/node": "^20.4.2",

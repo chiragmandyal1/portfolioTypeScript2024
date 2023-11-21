@@ -1,12 +1,8 @@
-import { SelectedPage } from "@/common/types";
-import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
-import SponsorRedBull from "@/assets/SponsorRedBull.png";
-import SponsorForbes from "@/assets/SponsorForbes.png";
-import SponsorFortune from "@/assets/SponsorFortune.png";
-import useMediaQuery from "@/hooks/useMediaQuery";
+import HomePageText from "@/assets/HomePageText.png";
 import ActionButton from "@/common/ActionButton";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { SelectedPage } from "@/common/types";
+import useMediaQuery from "@/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -16,11 +12,11 @@ type Props = {
 const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   return (
-    <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+    <section id="aboutme" className="gap-16  py-10 md:h-full md:pb-0">
       {/* Image and main header */}
       <motion.div
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
-        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.AboutMe)}
       >
         {/* Main Header */}
         <div className="z-10 mt-32 md:basis-3/5">
@@ -37,11 +33,20 @@ const Home = ({ setSelectedPage }: Props) => {
             }}
           >
             <div className="relative">
-              <div className="before:absolute before:-left-20 before:-top-20 before:z-[-1] md:before:content-evolvetext  ">
+              <div className="md:before:content-evolvetext before:absolute before:-left-20 before:-top-10 before:z-[-1]  ">
                 <img alt="home-page-text" src={HomePageText} />
               </div>
             </div>
-            <p className="mt-8 text-sm ">asdgauhjsbdjahbsdjbh</p>
+            <p className=" text-lg ">
+              A recent computer science graduate with experience in front-end
+              web development, specifically with React JS and JavaScript. Proven
+              ability to work independently and in a team environment,
+              delivering high-quality and user-friendly applications. Proficient
+              in integrating with back-end systems using APIs and knowledgeable
+              in popular node packages such as Bootstrap, Axios, Formik and
+              Material UI. A quick learner with strong communication skills and
+              a passion for technology.
+            </p>
           </motion.div>
           {/* Actions */}
           <motion.div
@@ -56,15 +61,8 @@ const Home = ({ setSelectedPage }: Props) => {
             }}
           >
             <ActionButton setSelectedPage={setSelectedPage}>
-              Join Now
+              Contact info
             </ActionButton>
-            <AnchorLink
-              className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.ContactUs}`}
-            >
-              <p>Learn More</p>
-            </AnchorLink>
           </motion.div>
         </div>
         {/* Image */}
@@ -72,15 +70,10 @@ const Home = ({ setSelectedPage }: Props) => {
           <img alt="home-pageGraphic" src={HomePageGraphic} />
         </div>
       </motion.div>
-      {/* Sponsors */}
       {isAboveMediumScreens && (
         <div className="h-[150px] w-full bg-primary-100 py-10">
           <div className="mx-auto w-5/6">
-            <div className="flex w-3/5 items-center justify-between gap-8">
-              <img alt="redbull-sponsor" src={SponsorRedBull} />
-              <img alt="forbes-sponsor" src={SponsorForbes} />
-              <img alt="fortune-sponsor" src={SponsorFortune} />
-            </div>
+            <div className="flex w-3/5 items-center justify-between gap-8"></div>
           </div>
         </div>
       )}
