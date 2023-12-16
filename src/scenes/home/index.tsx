@@ -63,6 +63,11 @@ const Home = ({ setSelectedPage }: Props) => {
             <ActionButton setSelectedPage={setSelectedPage}>
               Contact info
             </ActionButton>
+            <a href="https://github.com/WhySoOpKratos/Resume/archive/refs/heads/main.zip">
+              <button className="rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white">
+                Get Resume
+              </button>
+            </a>
           </motion.div>
         </div>
         {/* Image */}
