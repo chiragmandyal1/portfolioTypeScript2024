@@ -44,7 +44,7 @@ function Footer({}: Props) {
             </p>
           </div>
           <div className="mt-16 basis-1/4 md:mt-0">
-            <h4 className="text-xl font-bold">Contact Us</h4>
+            <h4 className="text-xl font-bold">Contact me 👋</h4>
             <p className="my-5 flex items-center gap-8">
               <a
                 href={`mailto:chiragmandyal82@gmail.com`}
@@ -63,7 +63,7 @@ function Footer({}: Props) {
             </p>
           </div>
           <div className="mt-16 basis-1/4 md:mt-0">
-            <h4 className="text-xl font-bold">Call on</h4>
+            <h4 className="text-xl font-bold">Call 📞</h4>
             <h4 className="mt-8 from-neutral-950 text-2xl">+91-82196-00177</h4>
           </div>
         </div>

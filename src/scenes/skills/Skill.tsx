@@ -16,7 +16,7 @@ export default function Skill({ icon, title }: Props) {
   return (
     <motion.div
       variants={childVariant}
-      className="mt-2 rounded-md   px-3 py-4 text-center"
+      className="mt-2 rounded-md px-3 py-4 text-center"
     >
       <div className="mb-4 flex justify-center">
         <div className="rounded-full border-2  bg-primary-100 p-4 hover:bg-white">

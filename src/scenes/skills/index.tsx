@@ -11,10 +11,10 @@ import {
   SiNestjs,
   SiTypescript,
 } from "react-icons/si";
-import { TbBrandJavascript } from "react-icons/tb";
+import { TbBrandJavascript, TbBrandNextjs, TbBrandRedux } from "react-icons/tb";
 import Skill from "./Skill";
 
-const skills: Array<SkillType> = [
+const skillSet1: Array<SkillType> = [
   {
     icon: <TbBrandJavascript className="h-10 w-10" />,
     title: "JavaScript",
@@ -39,6 +39,8 @@ const skills: Array<SkillType> = [
     icon: <SiAxios className="h-10 w-10" />,
     title: "Axios",
   },
+];
+const skillSet2: Array<SkillType> = [
   {
     icon: <FaDocker className="h-10 w-10" />,
     title: "Docker",
@@ -55,6 +57,14 @@ const skills: Array<SkillType> = [
     icon: <SiFastify className="h-10 w-10" />,
     title: "Fastify",
   },
+  {
+    icon: <TbBrandNextjs className="h-10 w-10" />,
+    title: "Nextjs",
+  },
+  {
+    icon: <TbBrandRedux className="h-10 w-10" />,
+    title: "Redux",
+  },
 ];
 const container = {
   hidden: {},
@@ -68,7 +78,7 @@ function Skills({ setSelectedPage }: Props) {
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}>
         {/* Header */}
         <motion.div
-          className="md:my-5 md:w-3/5"
+          className="md:my-20 md:w-3/5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -89,7 +99,23 @@ function Skills({ setSelectedPage }: Props) {
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
         >
-          {skills.map((benefit: SkillType) => (
+          {skillSet1.map((benefit: SkillType) => (
+            <Skill
+              key={benefit.title}
+              icon={benefit.icon}
+              title={benefit.title}
+              setSelectedPage={setSelectedPage}
+            />
+          ))}
+        </motion.div>
+        <motion.div
+          className="gap- mt-5 items-center justify-between md:flex"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+        >
+          {skillSet2.map((benefit: SkillType) => (
             <Skill
               key={benefit.title}
               icon={benefit.icon}
